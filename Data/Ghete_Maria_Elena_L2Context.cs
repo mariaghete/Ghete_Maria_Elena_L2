@@ -17,5 +17,6 @@ namespace Ghete_Maria_Elena_L2.Data
         public DbSet<Ghete_Maria_Elena_L2.Models.Book> Book { get; set; } = default!;
         public DbSet<Ghete_Maria_Elena_L2.Models.Publisher> Publisher { get; set; } = default!;
         public DbSet<Ghete_Maria_Elena_L2.Models.Author> Author { get; set; } = default!;
+        public DbSet<Ghete_Maria_Elena_L2.Models.Category> Category { get; set; } = default!;
     }
 }
