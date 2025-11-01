@@ -11,6 +11,14 @@ namespace Ghete_Maria_Elena_L2.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
+        [Display(Name = "Full Name")]
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
         // Navigation property pentru cărțile asociate
         public ICollection<Book>? Books { get; set; }
     }
