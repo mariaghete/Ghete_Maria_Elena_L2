@@ -1,12 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Ghete_Maria_Elena_L2.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<Ghete_Maria_Elena_L2Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Ghete_Maria_Elena_L2Context") ?? throw new InvalidOperationException("Connection string 'Ghete_Maria_Elena_L2Context' not found.")));
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<LibraryIdentityContext>();
+
+
 
 var app = builder.Build();
 
