@@ -18,7 +18,7 @@ builder.Services.AddRazorPages(options =>
 
 });
 builder.Services.AddDbContext<Ghete_Maria_Elena_L2Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Ghete_Maria_Elena_L2Context") ?? throw new InvalidOperationException("Connection string 'GabrielMarius_P_lab2Context' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Ghete_Maria_Elena_L2Context") ?? throw new InvalidOperationException("Connection string 'Ghete_Maria_Elena_L22Context' not found.")));
 
 //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<LibraryIdentityContext>();
 builder.Services.AddDbContext<LibraryIdentityContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Ghete_Maria_Elena_L2Context") ?? throw new InvalidOperationException("Connectionstring 'GabrielMarius_P_lab2Context' not found.")));
